@@ -16,7 +16,9 @@ with open(in_file_path) as f, open(outfile, 'w') as o:
     headers = ['identification_code', 'time_filed', 'time_closed', 'zipcode']
     writer.writerow(headers)
     for row in reader:
+        #row[8] refers to the column in the initial data with the zipcodes
         if row[8] != "":
             writer.writerow([row[0], row[1], row[2], row[8]])
+            #see headers above for corresponding column number identification
 
 print('done')

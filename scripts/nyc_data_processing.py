@@ -8,10 +8,13 @@ df = pd.read_csv(in_file_path)
 #finish this format
 date_format = '%m/%d/%Y %I:%M:%S %p'
 
+#Created a column for time difference in the df
 df['time_diff'] = ''
 
+#Remove any requests that have yet to be closed (are still open)
 df.dropna(axis=0, how='any', subset=['time_closed'], inplace=True)
 
+#Calculate time difference and append in correct column
 for index, values in df.iterrows():
     time2 = datetime.strptime(values[2], date_format)
     time1 = datetime.strptime(values[1], date_format)
