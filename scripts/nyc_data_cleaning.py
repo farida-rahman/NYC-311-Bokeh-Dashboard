@@ -7,8 +7,8 @@ TO-DO:
 import csv
 import os.path
 
-in_file_path = os.path.join(os.path.abspath('data'),'nyc_data.csv')
-outfile = os.path.join(os.path.abspath('data'), 'subsetted_nyc_data.csv')
+in_file_path = os.path.join(os.path.abspath('../data'),'nyc_data.csv')
+outfile = os.path.join(os.path.abspath('../data'), 'subsetted_nyc_data.csv')
 
 with open(in_file_path) as f, open(outfile, 'w') as o:
     reader = csv.reader(f)
