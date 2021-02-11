@@ -1,7 +1,6 @@
 '''
 TO-DO:
 - Use data from the internet that gives a zipcode for the corresponding latitude aand longitude to fill in the missing zipcode information (need to redo the file reading and take out the line that filters out rows without a value for zipcode)
-- ask Daniil about best practices when open huge files like this: should I make this two different scripts? Not write it to it's own file?
 '''
 
 import csv
